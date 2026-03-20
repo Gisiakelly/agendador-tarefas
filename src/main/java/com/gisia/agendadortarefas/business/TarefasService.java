@@ -24,6 +24,7 @@ public class TarefasService {
         String email = jwtUtil.extrairEmailToken(token.substring(7));
         dto.setDataCriacao(LocalDateTime.now());
         dto.setStatusNotificacaoEnum(StatusNotificacaoEnum.PENDENTE);
+        dto.setEmailUsuario(email);
         TarefasEntity entity = tarefasConverter.paraTarefaEntity(dto);
 
         return tarefasConverter.paraTarefaDTO(
