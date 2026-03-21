@@ -4,10 +4,6 @@ on:
   push:
     branches: [ "master" ]
 
-permissions:
-  contents: read
-  security-events: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,6 +25,3 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
-
-      - name: Submit dependency graph
-        uses: gradle/actions/dependency-submission@v4
