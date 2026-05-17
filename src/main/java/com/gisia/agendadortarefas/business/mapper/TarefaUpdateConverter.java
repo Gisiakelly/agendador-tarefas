@@ -1,6 +1,6 @@
 package com.gisia.agendadortarefas.business.mapper;
 
-import com.gisia.agendadortarefas.business.dto.TarefasDTO;
+import com.gisia.agendadortarefas.business.dto.TarefasDTORecord;
 import com.gisia.agendadortarefas.infrastructure.entity.TarefasEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
@@ -10,5 +10,5 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface TarefaUpdateConverter {
 
-    void updateTarefas(TarefasDTO dto, @MappingTarget TarefasEntity entity);
+    void updateTarefas(TarefasDTORecord dto, @MappingTarget TarefasEntity entity);
 }
